@@ -1,0 +1,74 @@
+/* The interactive guide is the project's first and primary screen. */
+html{scroll-behavior:smooth;scroll-padding-top:6.6rem}
+.hero-live{background:linear-gradient(145deg,#123638 0%,#0a2628 100%)}
+.hero-live-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(2rem,4vw,4.5rem);align-items:start;padding-block:clamp(2.8rem,5vw,5rem)}
+.hero-live-intro{min-width:0;padding-top:.65rem}
+.hero-live .eyebrow{color:#e9b986;margin-bottom:1.25rem}
+.live-status{display:inline-flex;align-items:center;gap:.65rem;padding:.44rem .72rem;border:1px solid #668983;color:#d8eee4;font-size:.69rem;font-weight:800;letter-spacing:.13em;line-height:1.3;margin-bottom:1.6rem}
+.live-dot{width:.55rem;height:.55rem;border-radius:50%;background:#a9dbac;box-shadow:0 0 0 .24rem rgba(169,219,172,.16)}
+.hero-live h1{font-size:clamp(3.4rem,6vw,6.3rem);max-width:10ch;margin-bottom:1.2rem}
+.hero-live .hero-lead{font-size:clamp(1.4rem,2vw,1.75rem);max-width:26rem;line-height:1.24}
+.hero-live .hero-support{max-width:33rem;color:#d3e2dc;font-size:1.03rem;line-height:1.6}
+.hero-live .hero-actions{margin-top:1.55rem}
+.hero-live .button-primary{gap:1rem}
+.hero-facts{display:flex;flex-wrap:wrap;gap:.65rem 1.3rem;margin:2.55rem 0 1.8rem;padding-top:1.05rem;border-top:1px solid #587673;color:#d7e5df;font-size:.83rem}
+.hero-facts span{display:inline-flex;align-items:baseline;gap:.38rem}
+.hero-facts strong{color:#efbd85;font-size:1.25rem;line-height:1;font-weight:700}
+.hero-live-photo{margin:0;position:relative;overflow:hidden;max-width:35rem}
+.hero-live-photo img{width:100%;height:clamp(10rem,17vw,14rem);object-fit:cover;object-position:center 48%;filter:saturate(.74) contrast(1.08)}
+.hero-live-photo figcaption{font-size:.66rem;color:#dce8e2;margin-top:.38rem;line-height:1.35}
+.guide-console{background:#fffdfa;color:var(--ink);border:1px solid #d7d5c9;box-shadow:0 1.5rem 3.5rem rgba(0,0,0,.2);padding:clamp(1.3rem,2.5vw,2.3rem);min-width:0}
+.guide-topline{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--rust);font-size:.7rem;font-weight:800;letter-spacing:.13em}
+.guide-version{color:#6b7773;white-space:nowrap}
+.guide-console h2{font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:1.12;letter-spacing:-.035em;margin:1.12rem 0 .56rem}
+.guide-subtitle{font-size:.93rem;color:var(--muted);margin-bottom:1.4rem;max-width:34rem}
+.guide-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #bccbc4;border-bottom:1px solid #bccbc4;margin-bottom:1.15rem}
+.guide-step{min-width:0;appearance:none;background:transparent;color:var(--ink);border:0;border-bottom:3px solid transparent;text-align:left;padding:.82rem .4rem .86rem .2rem;cursor:pointer;font:inherit;line-height:1.18}
+.guide-step+.guide-step{border-left:1px solid #d9dfd7;padding-left:.75rem}
+.guide-step span{display:block;color:var(--rust);font-size:.73rem;font-weight:800;margin-bottom:.22rem}
+.guide-step strong{display:block;font-size:.87rem;font-weight:800}
+.guide-step[aria-selected="true"]{border-bottom-color:var(--green);background:#eff5ef}
+.guide-step:hover{background:#f3f6f1}
+.guide-panel{background:#f1f4ee;padding:clamp(1.2rem,2.3vw,2rem);min-height:20.8rem}
+.guide-panel-meta{display:flex;justify-content:space-between;gap:1rem;color:var(--rust);font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.guide-panel h3{font-size:clamp(1.45rem,2.3vw,2.05rem);letter-spacing:-.025em;line-height:1.18;margin:1.15rem 0 .85rem;max-width:25ch}
+.guide-plain{font-size:1.02rem;line-height:1.55;margin-bottom:1.05rem}
+.guide-detail{border-top:1px solid #c5d1c7;padding-top:.68rem;margin-bottom:.95rem}
+.guide-detail summary{cursor:pointer;color:var(--green);font-weight:800;font-size:.86rem}
+.guide-detail p{font-size:.88rem;color:var(--muted);margin:.68rem 0 0;line-height:1.5}
+.guide-source{font-size:.84rem;font-weight:800;display:inline-block;margin-top:.15rem}
+.guide-actions{display:flex;align-items:stretch;justify-content:space-between;gap:.8rem;margin-top:1rem}
+.guide-actions button{border:1px solid var(--green);background:transparent;color:var(--green);font:inherit;font-size:.9rem;font-weight:800;padding:.77rem .86rem;min-height:2.75rem;cursor:pointer}
+.guide-actions button:last-child{background:var(--green);color:#fff;min-width:9rem}
+.guide-actions button:hover:not(:disabled){background:#d9e9dd;color:#0f514c}
+.guide-actions button:last-child:hover{background:#174b47;color:#fff}
+.guide-actions button:disabled{opacity:.42;cursor:not-allowed}
+.guide-footnote{font-size:.72rem;line-height:1.42;color:var(--muted);margin:.75rem 0 0}
+.pilot-wrap{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(2rem,5vw,5rem);border-top:1px solid var(--line);margin-top:4rem;padding-top:3.1rem}
+.pilot-intro h3{font-size:clamp(1.8rem,2.7vw,2.55rem);line-height:1.15;letter-spacing:-.03em;margin:.4rem 0 .9rem}
+.pilot-intro p:last-child{color:var(--muted);max-width:28rem}
+.pilot-form{background:var(--soft);padding:clamp(1.35rem,2.6vw,2.35rem);border-top:4px solid var(--green)}
+.pilot-form fieldset{border:0;padding:0 0 1.45rem;margin:0 0 1.45rem;border-bottom:1px solid var(--line)}
+.pilot-form legend{font-size:.98rem;font-weight:800;line-height:1.4;margin-bottom:.72rem}
+.pilot-form label{display:inline-flex;align-items:center;gap:.36rem;margin:.15rem .9rem .15rem 0;cursor:pointer;font-size:.91rem;min-height:1.8rem}
+.pilot-form input{accent-color:var(--green);width:1.03rem;height:1.03rem}
+.pilot-form .button-primary{border:0;cursor:pointer}
+.pilot-message{margin:1.1rem 0 .75rem;font-size:.9rem;font-weight:700;color:var(--green)}
+.pilot-tools{display:flex;flex-wrap:wrap;gap:.7rem}
+.pilot-tools button{background:transparent;color:var(--green);border:1px solid var(--green);font:inherit;font-size:.78rem;font-weight:800;padding:.55rem .72rem;cursor:pointer}
+.pilot-tools button:disabled{opacity:.42;cursor:not-allowed}
+.pilot-tools button:hover:not(:disabled){background:#d5e6da}
+.pilot-caveat{border-top:1px solid var(--line);margin:1.35rem 0 0;padding-top:.85rem;font-size:.75rem;color:var(--muted);line-height:1.5}
+.qr-share{display:grid;grid-template-columns:7.5rem 1fr;gap:1.1rem;align-items:center;max-width:35rem;margin-top:2.2rem;padding:1rem;background:#f1f3ec;color:var(--ink)}
+.qr-share img{width:7.5rem;height:7.5rem;object-fit:contain;background:#fff}
+.qr-share strong{font-size:1rem}.qr-share p{font-size:.79rem;line-height:1.45;color:var(--muted);margin:.3rem 0 .5rem}.qr-share a{display:block;font-size:.77rem;font-weight:800;overflow-wrap:anywhere;margin-top:.2rem}
+html.high-contrast .guide-console{background:#fff;border-color:#061f20}
+html.high-contrast .guide-panel,html.high-contrast .pilot-form{background:#fff;border:2px solid #061f20}
+html.high-contrast .guide-step[aria-selected="true"]{background:#e6f2e8}
+html.high-contrast .guide-plain,html.high-contrast .guide-detail p,html.high-contrast .guide-subtitle{color:#071a1b}
+@media(max-width:1060px){.hero-live-grid{gap:2rem}.hero-facts{gap:.55rem 1rem}.guide-console{padding:1.35rem}.guide-panel{min-height:22rem}}
+@media(max-width:850px){.hero-live-grid{grid-template-columns:1fr;padding-block:3rem}.hero-live-intro{padding:0}.hero-live h1{max-width:none}.hero-live-photo{display:none}.hero-facts{margin-bottom:.2rem}.guide-console{max-width:46rem}.guide-panel{min-height:0}.pilot-wrap{grid-template-columns:1fr;gap:1.25rem}.pilot-intro p:last-child{max-width:45rem}}
+@media(max-width:600px){.hero-live-grid{padding-block:2.4rem 2.7rem;gap:2.1rem}.live-status{margin-bottom:1.15rem}.hero-live h1{font-size:clamp(3.1rem,13vw,4.6rem)}.hero-live .hero-support{font-size:.96rem}.hero-facts{margin-top:1.8rem}.guide-console{padding:1.05rem}.guide-console h2{font-size:1.85rem}.guide-subtitle{font-size:.85rem}.guide-step{padding:.74rem .2rem}.guide-step+.guide-step{padding-left:.38rem}.guide-step strong{font-size:.73rem}.guide-panel{padding:1.25rem 1.05rem}.guide-panel h3{font-size:1.48rem}.guide-plain{font-size:.94rem}.guide-actions button{font-size:.78rem;padding:.7rem .55rem}.guide-actions button:last-child{min-width:0}.pilot-wrap{margin-top:3rem;padding-top:2.3rem}.pilot-form label{display:flex}}
+@media(max-width:480px){.qr-share{grid-template-columns:5.5rem 1fr;gap:.8rem}.qr-share img{width:5.5rem;height:5.5rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.guide-actions,.pilot-form,.hero-live-photo{display:none!important}.hero-live{background:#fff;color:#000}.hero-live-grid{display:block;padding:0}.hero-live-intro{color:#000}.hero-live .eyebrow,.live-status,.hero-live h1,.hero-live .hero-support,.hero-live .hero-lead,.hero-facts{color:#000}.guide-console{box-shadow:none;border:1px solid #000;margin:1rem 0}.pilot-wrap{display:block}}

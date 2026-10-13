@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#123638">
-  <meta name="description" content="Шымқала бәріне — Шымкенттің тарихи мұрасын әр келушіге түсінікті ететін ғылыми жоба. Деректер, шешім, тексеру жоспары және дереккөздер.">
+  <meta name="description" content="Шымқала бәріне — Шымкент тарихына арналған жұмыс істейтін цифрлық гид. Үш тарихи кезең, ашық дереккөздер, қолжетімді оқу және ғылыми сынақ құралы.">
   <title>Шымқала бәріне — Ақылды өлке</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/NotoSans-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
   <script defer src="app.js"></script>
 </head>
 <body>
@@ -19,8 +21,8 @@
         <span class="brand-copy"><strong>Шымқала</strong><small>бәріне</small></span>
       </a>
       <nav class="main-nav" aria-label="Бөлімдер">
+        <a href="#guide">Цифрлық гид</a>
         <a href="#context">Өзектілік</a>
-        <a href="#history">Тарих</a>
         <a href="#solution">Шешім</a>
         <a href="#research">Зерттеу</a>
         <a href="#sources">Дереккөздер</a>
@@ -33,23 +35,40 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy wrap">
-        <div class="hero-text">
-          <p class="eyebrow">«Ақылды өлке: болашаққа арналған шешім» · 10-сынып жобасы</p>
-          <h1 id="hero-title">Шымқала <em>бәріне</em></h1>
-          <p class="hero-lead">Шымкенттің көне қаласының тарихын әр адамға түсінікті етуге арналған ақпараттық үлгі.</p>
-          <p class="hero-support">Үш тарихи кезең. Тексерілген дерек. Мәтінді өзіңізге ыңғайлы көлемде оқу мүмкіндігі.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#history">Үш кезеңді қарау</a>
-            <a class="text-link" href="#research">Зерттеу әдісі</a>
+    <section class="hero hero-live" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-live-grid">
+        <div class="hero-live-intro">
+          <p class="eyebrow">«Ақылды өлке: болашаққа арналған шешім» · Шымкент</p>
+          <div class="live-status"><span class="live-dot" aria-hidden="true"></span> ЖҰМЫС ІСТЕЙТІН ВЕБ-НҰСҚА</div>
+          <h1 id="hero-title">Шымқала <em>бәріне.</em></h1>
+          <p class="hero-lead">Көне қала тарихын өз ырғағыңызбен ашыңыз.</p>
+          <p class="hero-support">Бұл бет — жобаның цифрлық жолсерігі. Үш кезеңді аралап, әр тұжырымның дереккөзін көріңіз және мәтінді өзіңізге ыңғайлап оқыңыз.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#guide">Гидті пайдалану <span aria-hidden="true">↗</span></a><a class="text-link" href="#research">Жобаның мәртебесі</a></div>
+          <div class="hero-facts" aria-label="Қазір жұмыс істейтін мүмкіндіктер">
+            <span><strong>03</strong> тарихи кезең</span><span><strong>09</strong> ашық дереккөз</span><span><strong>02</strong> оқу баптауы</span>
           </div>
-          <p class="hero-authors">Авторлар: <strong>Әбдіжапбар Мансұр</strong> және <strong>Ерментай Ертұр</strong><br>Шымкент · 2026–2027 оқу жылы</p>
+          <figure class="hero-live-photo"><img src="assets/shymqala-gate.webp" width="1600" height="1066" alt="Шымқала тарихи-мәдени кешенінің қақпасы мен қорғаны" fetchpriority="high"><figcaption>Шымқала кешені. Фото: TheGreatSteppe / Wikimedia Commons, CC BY-SA 4.0.</figcaption></figure>
         </div>
-        <figure class="hero-photo">
-          <img src="assets/shymqala-gate.webp" width="1600" height="1066" alt="Шымқала тарихи-мәдени кешенінің қақпасы мен қорғаны" fetchpriority="high">
-          <figcaption>Шымқала кешені. Фото: TheGreatSteppe / Wikimedia Commons, CC BY-SA 4.0.</figcaption>
-        </figure>
+        <section class="guide-console" id="guide" aria-labelledby="guide-title">
+          <div class="guide-topline"><span class="guide-kicker">ИНТЕРАКТИВТІ ГИД</span><span class="guide-version">НҰСҚА 1.0</span></div>
+          <h2 id="guide-title">Үш кезеңге саяхат</h2>
+          <p class="guide-subtitle">Тақырыпты таңдаңыз немесе «Келесі» түймесін басыңыз. Әр кезеңнің дерегі көрсетілген.</p>
+          <div class="guide-steps" role="tablist" aria-label="Тарихи кезеңдер">
+            <button class="guide-step" id="guide-tab-ancient" type="button" role="tab" aria-selected="true" aria-controls="guide-panel" data-guide="ancient"><span>01</span><strong>Көне қабат</strong></button>
+            <button class="guide-step" id="guide-tab-medieval" type="button" role="tab" aria-selected="false" aria-controls="guide-panel" tabindex="-1" data-guide="medieval"><span>02</span><strong>Орта ғасыр</strong></button>
+            <button class="guide-step" id="guide-tab-craft" type="button" role="tab" aria-selected="false" aria-controls="guide-panel" tabindex="-1" data-guide="craft"><span>03</span><strong>Қолөнер</strong></button>
+          </div>
+          <article class="guide-panel" id="guide-panel" role="tabpanel" aria-labelledby="guide-tab-ancient" tabindex="0" aria-live="polite">
+            <div class="guide-panel-meta"><span id="guide-era">Б.з.д. III–II ғасырлар</span><span id="guide-progress">1 / 3</span></div>
+            <h3 id="guide-stage-title">Ең төменгі қабаттан табылған қыш</h3>
+            <p class="guide-plain" id="guide-plain">Қыш ыдыс сынықтары бұл жерде адамдар ерте заманда да өмір сүргенін көрсетеді.</p>
+            <details class="guide-detail"><summary>Толығырақ оқу</summary><p id="guide-detail-text">Ескі қалашықтың төменгі мәдени қабатынан б.з.д. III–II ғасырларға жататын қыш ыдыстар табылған. Бұл — Шымқаланың ерте кезеңіне қатысты археологиялық айғақ.</p></details>
+            <a id="guide-source" class="guide-source" href="https://kazakhstan.travel/kz/attractions/471" target="_blank" rel="noopener noreferrer">↗ Дерек: Kazakhstan.travel [3]</a>
+          </article>
+          <div class="guide-actions"><button id="guide-prev" type="button" disabled>← Артқа</button><button id="guide-next" type="button">Келесі кезең →</button></div>
+          <p class="guide-footnote">Үш кезең — келушіге арналған іріктеу; толық археологиялық кезеңдеу емес.</p>
+          <noscript><p class="guide-footnote">Кезеңдерді ауыстыру үшін браузерде JavaScript қосулы болуы керек. Тарихи деректердің сілтемелері төменде берілген.</p></noscript>
+        </section>
       </div>
     </section>
 
@@ -85,30 +104,11 @@
       </div>
     </section>
 
-    <section class="section history-section" id="history" aria-labelledby="history-title">
-      <div class="wrap">
-        <div class="section-heading compact">
-          <p class="section-index">03 / Тарихи айғақтар</p>
-          <h2 id="history-title">Шымқаланың үш тарихи қабаты</h2>
-          <p>Кезеңді таңдаңыз. Әр фактінің жанында оны тексеруге болатын дереккөз көрсетілген.</p>
-        </div>
-        <div class="timeline" role="tablist" aria-label="Тарихи кезеңдер">
-          <button class="era-tab" id="tab-ancient" type="button" role="tab" aria-selected="true" aria-controls="era-panel" data-era="ancient"><span>01</span><strong>Көне қабат</strong><small>Б.з.д. III–II ғғ.</small></button>
-          <button class="era-tab" id="tab-medieval" type="button" role="tab" aria-selected="false" aria-controls="era-panel" tabindex="-1" data-era="medieval"><span>02</span><strong>Орта ғасыр</strong><small>X–XII ғғ.</small></button>
-          <button class="era-tab" id="tab-craft" type="button" role="tab" aria-selected="false" aria-controls="era-panel" tabindex="-1" data-era="craft"><span>03</span><strong>Қолөнер ізі</strong><small>XVII–XVIII ғғ.</small></button>
-        </div>
-        <article class="era-panel" id="era-panel" role="tabpanel" aria-labelledby="tab-ancient" tabindex="0" aria-live="polite">
-          <div><p class="era-kicker" id="era-time">Б.з.д. III–II ғасырлар</p><h3 id="era-title">Ең төменгі қабаттан табылған қыш</h3><p id="era-description">Ескі қалашықтың төменгі мәдени қабатынан осы кезеңге жататын қыш ыдыстар табылған. Бұл жердің ерте тарихын танытатын археологиялық айғақ.</p><a id="era-source" class="source-link" href="#source-3">Дерек: Kazakhstan.travel [3]</a></div>
-          <p class="era-aside" id="era-meaning"><span>Нені көрсетеді?</span> Шымқаланы тек бүгінгі қорған көрінісімен шектемей, жер астындағы көне қабатты да түсіндіру керек.</p>
-        </article>
-        <p class="small-note">Бұл үш кезең — келушіге арналған мазмұндық іріктеу; қалашықтың толық археологиялық кезеңдеуі емес.</p>
-      </div>
-    </section>
 
     <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
       <div class="wrap">
         <div class="section-heading compact">
-          <p class="section-index">04 / Құжаттық талдау</p>
+          <p class="section-index">03 / Құжаттық талдау</p>
           <h2 id="evidence-title">Деректер қайда берілген?</h2>
           <p>Үш ресми ақпарат арнасын салыстырып, оларды қайталамайтын мазмұн ұсындық.</p>
         </div>
@@ -127,21 +127,22 @@
     <section class="section solution-section" id="solution" aria-labelledby="solution-title">
       <div class="wrap solution-grid">
         <div>
-          <p class="section-index">05 / Ұсынылған шешім</p>
-          <h2 id="solution-title">Бір дерек. Бірнеше оқу тәсілі.</h2>
-          <p class="solution-intro">Осы сайт — цифрлық жолсеріктің мәтіндік прототипі. Ол үш кезеңді дереккөзімен көрсетеді және оқырманға мәтін көлемі мен контрастты өзгертуге мүмкіндік береді.</p>
+          <p class="section-index">04 / Іске асқан шешім</p>
+          <h2 id="solution-title">Идеяны қазір осы бетте қолдануға болады.</h2>
+          <p class="solution-intro">Цифрлық гид жұмыс істейді: кезеңді ауыстырады, қысқа және толық түсінікті көрсетеді, дереккөзге апарады. Мәтін өлшемі мен контраст пайдаланушы таңдауына бейімделеді.</p>
           <ol class="solution-steps">
-            <li><span>01</span><div><strong>Ашу</strong><p>QR немесе тікелей сілтеме арқылы кіру.</p></div></li>
-            <li><span>02</span><div><strong>Өзіне бейімдеу</strong><p>Мәтінді үлкейту, контрастты күшейту.</p></div></li>
-            <li><span>03</span><div><strong>Тексеріп оқу</strong><p>Үш кезеңнің қысқа мәтіні мен бастапқы дереккөзін қарау.</p></div></li>
+            <li><span>01</span><div><strong>Бірден пайдалану</strong><p>Алғашқы экранда үш тарихи кезең бойынша интерактивті гид ашық тұрады.</p></div></li>
+            <li><span>02</span><div><strong>Оқуды бейімдеу</strong><p>Жоғарғы жақтағы A+ және контраст түймелері сайттың барлық мәтініне әсер етеді.</p></div></li>
+            <li><span>03</span><div><strong>Дәлелге өту</strong><p>Әр кезеңнің бастапқы дереккөзі мен толық дереккөз тізімі бір басқанда ашылады.</p></div></li>
           </ol>
+          <div class="qr-share"><img src="assets/qr-shymqala.png" width="810" height="810" loading="lazy" alt="Шымқала бәріне веб-гидін телефонда ашатын QR код"><div><strong>Телефонда ашып көріңіз</strong><p>QR код осы веб-гидтің тұрақты мекенжайына апарады. Нысан аумағында орналастыру музей келісімінен кейін ғана мүмкін.</p><a href="https://shymkentzertteu.vercel.app/" target="_blank" rel="noopener noreferrer">shymkentzertteu.vercel.app ↗</a><a href="assets/qr-shymqala.png" download="shymqala-qr.png">QR суретін жүктеу ↓</a></div></div>
         </div>
         <aside class="standard-panel" aria-label="Қолжетімділік өлшемдері">
           <p class="panel-overline">ЖОБАЛАУ ӨЛШЕМДЕРІ</p>
           <div class="standard"><strong>4,5:1</strong><span>негізгі веб-мәтіннің ең төменгі контрасты <a href="#source-7">[7]</a></span></div>
           <div class="standard"><strong>200%</strong><span>үлкейткенде мазмұн жоғалмауы керек <a href="#source-7">[7]</a></span></div>
           <div class="standard"><strong>Баламалар</strong><span>суретке сипаттама, аудиоға мәтіндік нұсқа <a href="#source-7">[7]</a> <a href="#source-8">[8]</a></span></div>
-          <p class="standard-note">Бұл талаптар жоспарға енгізілді. Сайттың толық WCAG сәйкестігі жеке аудиттен өтпеген. Дыбыстық нұсқа әзірлеу жоспарда бар.</p>
+          <p class="standard-note">Мәтінді үлкейту мен жоғары контраст сайтта іске қосылған. Толық WCAG аудиті және дыбыстық нұсқа әзірге орындалған жоқ.</p>
         </aside>
       </div>
     </section>
@@ -149,30 +150,42 @@
     <section class="section research-section" id="research" aria-labelledby="research-title">
       <div class="wrap research-grid">
         <div>
-          <p class="section-index">06 / Зерттеу тәртібі</p>
-          <h2 id="research-title">Не жасалды, не тексеріледі?</h2>
-          <div class="status-block"><span class="status-word">Жасалды</span><p>Үш тарихи тараудың қазақша мәтіні; музей, қала және туристік деректерді салыстыру; қолжетімділік өлшемін таңдау.</p></div>
-          <div class="status-block"><span class="status-word">Келесі қадам</span><p>Музей маманымен деректерді келісу, келушілермен сынақ өткізу, содан кейін ғана нысанда QR ақпаратын орналастыруды сұрау.</p></div>
+          <p class="section-index">05 / Зерттеу тәртібі</p>
+          <h2 id="research-title">Не жұмыс істейді, не тексеріледі?</h2>
+          <div class="status-block"><span class="status-word">Іске қосылды</span><p>Қазақша үш кезеңдік веб-гид, дереккөзге тікелей өту, мәтін өлшемі мен контрастты баптау.</p></div>
+          <div class="status-block"><span class="status-word">Сынақ құралы</span><p>Осы беттегі қысқа сауалнама жауапты тек осы құрылғыда сақтайды және CSV түрінде шығаруға мүмкіндік береді.</p></div>
+          <div class="status-block"><span class="status-word">Келесі қадам</span><p>Музей маманымен мазмұнды келісу, келушілермен өлшенетін сынақ өткізу, нысанда QR ақпаратын орнатуға рұқсат сұрау.</p></div>
         </div>
         <div class="test-plan">
-          <p class="test-label">ЖОСПАРЛАНҒАН СЫНАҚ · ӘЛІ ЖҮРГІЗІЛМЕДІ</p>
+          <p class="test-label">ЗЕРТТЕУ ЖОСПАРЫ · НӘТИЖЕ ЕМЕС</p>
           <strong class="test-number">10 адам</strong>
           <ol><li>Үш тарихи кезеңді дұрыс реттеу.</li><li>Факт пен оның сілтемесін 60 секундта табу.</li><li>200% үлкейту мен экран дикторымен оқуды тексеру.</li></ol>
           <p><strong>Мақсатты көрсеткіш:</strong> кемінде 8/10 адам фактіні 60 секундта табады. Бұл нәтиже емес, сынақтан бұрын қойылған өлшем.</p>
         </div>
       </div>
+      <div class="wrap pilot-wrap">
+        <div class="pilot-intro"><p class="section-index">ҚОЛДАНУДАН КЕЙІН</p><h3>Гид түсінікті болды ма?</h3><p>Төмендегі шағын сауалнама — жұмыс істейтін сынақ құралы. Ол жеке мәлімет сұрамайды және жауаптарды тек осы браузерде сақтайды.</p></div>
+        <form class="pilot-form" id="pilot-form">
+          <fieldset><legend>Үш кезеңді түсіну қаншалықты оңай болды?</legend><label><input type="radio" name="clarity" value="Оңай" required> Оңай</label><label><input type="radio" name="clarity" value="Орташа"> Орташа</label><label><input type="radio" name="clarity" value="Қиын"> Қиын</label></fieldset>
+          <fieldset><legend>Тарихи деректің сілтемесін таптыңыз ба?</legend><label><input type="radio" name="source" value="Иә" required> Иә</label><label><input type="radio" name="source" value="Жоқ"> Жоқ</label></fieldset>
+          <button class="button button-primary" type="submit">Жауапты сақтау</button>
+          <p id="pilot-message" class="pilot-message" role="status" aria-live="polite">Бұл құрылғыда әзірге жауап сақталған жоқ.</p>
+          <div class="pilot-tools"><button id="pilot-export" type="button" disabled>CSV жүктеу</button><button id="pilot-reset" type="button" disabled>Жауаптарды өшіру</button></div>
+          <p class="pilot-caveat">Бұл жердегі сан — тек осы браузердегі жауаптар. Ол жалпы келушілердің ғылыми нәтижесі ретінде көрсетілмейді.</p>
+        </form>
+      </div>
     </section>
 
     <section class="section team-section" id="team" aria-labelledby="team-title">
       <div class="wrap team-grid">
-        <div><p class="section-index">07 / Жоба тобы</p><h2 id="team-title">Авторы мен материалдары</h2><p>Жоба Шымкенттің тарихи-мәдени мұрасын зерттеу және оны қолжетімді түрде түсіндіру үшін дайындалды.</p><p class="integrity-note">Конкурс ережесіне сай қатысушылар деректерді өздері тексеріп, өз үлесін және ЖИ қолдануын ашық көрсетуі қажет.</p></div>
+        <div><p class="section-index">06 / Жоба тобы</p><h2 id="team-title">Авторы мен материалдары</h2><p>Жоба Шымкенттің тарихи-мәдени мұрасын зерттеу және оны қолжетімді түрде түсіндіру үшін дайындалды.</p><p class="integrity-note">Конкурс ережесіне сай қатысушылар деректерді өздері тексеріп, өз үлесін және ЖИ қолдануын ашық көрсетуі қажет.</p></div>
         <div class="team-right"><div class="authors"><span>Авторлар</span><strong>Әбдіжапбар Мансұр</strong><strong>Ерментай Ертұр</strong></div><div class="downloads"><a href="files/presentation.pptx" download>Презентацияны жүктеу <span>PPTX</span></a><a href="files/stand-120x100.pptx" download>Стендті жүктеу <span>120 × 100 см</span></a></div></div>
       </div>
     </section>
 
     <section class="section sources-section" id="sources" aria-labelledby="sources-title">
       <div class="wrap">
-        <div class="section-heading compact"><p class="section-index">08 / Ашық дерек</p><h2 id="sources-title">Пайдаланылған дереккөздер</h2><p>Тарихи және қалалық мәліметтер ресми және институционалдық беттер бойынша тексерілді. Қаралған күні: 12 қазан 2026.</p></div>
+        <div class="section-heading compact"><p class="section-index">07 / Ашық дерек</p><h2 id="sources-title">Пайдаланылған дереккөздер</h2><p>Тарихи және қалалық мәліметтер ресми және институционалдық беттер бойынша тексерілді. Қаралған күні: 12 қазан 2026.</p></div>
         <ol class="source-list">
           <li id="source-1"><span>[1]</span><a href="https://shymkentmuseums.kz/ru/otdeleniya-muzeya/otdel-istoriko-kulturnyj-kompleks-shym-kala.html" target="_blank" rel="noopener noreferrer">Шымкент қаласы музейлер бірлестігі — «Шымқала» кешені</a></li>
           <li id="source-2"><span>[2]</span><a href="https://www.gov.kz/memleket/entities/shymkent-til/press/media/details/24907" target="_blank" rel="noopener noreferrer">Шымкент қаласының ресми порталы — «Шымкент қалашығы»</a></li>
