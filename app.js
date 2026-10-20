@@ -1,10 +1,10 @@
 const guideData = [
   {
     key: 'ancient',
-    era: 'Б.з.д. III–II ғасырлар',
+    era: 'Б.з.д. III ғ. соңы – II ғ. басы',
     title: 'Ең төменгі қабаттан табылған қыш',
     plain: 'Қыш ыдыс сынықтары бұл жерде адамдар ерте заманда да өмір сүргенін көрсетеді.',
-    detail: 'Ескі қалашықтың төменгі мәдени қабатынан б.з.д. III–II ғасырларға жататын қыш ыдыстар табылған. Бұл — Шымқаланың ерте кезеңіне қатысты археологиялық айғақ.',
+    detail: 'Ескі қалашықтың төменгі мәдени қабатынан б.з.д. III ғасырдың соңы мен II ғасырдың басына жататын қыш ыдыстар табылған. Бұл — Шымқаланың ерте кезеңіне қатысты археологиялық айғақ.',
     source: '↗ Дерек: Kazakhstan.travel [3]',
     href: 'https://kazakhstan.travel/kz/attractions/471'
   },
@@ -57,6 +57,7 @@ function showGuide(index, focusTab = false) {
   previousButton.disabled = index === 0;
   nextButton.textContent = index === guideData.length - 1 ? 'Пікір қалдыру →' : 'Келесі кезең →';
   if (focusTab) guideTabs[index].focus();
+  window.dispatchEvent(new CustomEvent('shymqala:guidechange', {detail: {index}}));
 }
 
 guideTabs.forEach((tab, index) => {
@@ -183,5 +184,5 @@ if ('IntersectionObserver' in window) {
     if (!visible) return;
     navLinks.forEach(link => link.setAttribute('aria-current', String(link.getAttribute('href') === `#${visible.target.id}`)));
   }, {rootMargin: '-18% 0px -60% 0px', threshold: [0, .1, .4]});
-  ['guide', 'context', 'solution', 'research', 'sources'].forEach(id => observer.observe(document.getElementById(id)));
+  ['guide', 'digital-map', 'audio-guide', 'research', 'sources'].forEach(id => observer.observe(document.getElementById(id)));
 }
