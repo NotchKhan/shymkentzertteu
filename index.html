@@ -8,11 +8,9 @@
   <title>Шымқала бәріне — Ақылды өлке</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/NotoSans-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="experience.css">
   <link rel="stylesheet" href="media.css">
-  <script defer src="assets/leaflet/leaflet.js"></script>
   <script defer src="app.js"></script>
   <script defer src="media.js"></script>
 </head>
@@ -80,23 +78,23 @@
 
     <section class="section map-section" id="digital-map" aria-labelledby="map-title">
       <div class="wrap">
-        <div class="section-heading compact"><p class="section-index">ҚАЛАДАҒЫ ОРНЫ</p><h2 id="map-title">Шымқала цифрлық картада</h2><p>Тарихи кешенді тауып, мекенжайын қараңыз. Картадағы белгі нысанның орналасуын көрсетеді.</p></div>
+        <div class="section-heading compact"><p class="section-index">ҚАЛАДАҒЫ ОРНЫ</p><h2 id="map-title">Шымқала цифрлық картада</h2><p>Шымқаланың орналасуын 2GIS картасынан көріп, кешенге баратын бағытты таңдаңыз.</p></div>
         <div class="map-layout">
-          <div>
-            <div class="map-frame">
-              <div class="map-placeholder" id="map-placeholder"><span class="map-location-mark" aria-hidden="true">Ш</span><strong>Шымкент · Шымқала</strong><p>Көшелер мен кешеннің орнын көру үшін «Картаны ашу» түймесін басыңыз.</p></div>
-              <div id="heritage-map" hidden aria-label="Шымқала кешенінің интерактивті картасы"></div>
-            </div>
-            <p class="map-status" id="map-status" role="status">Карта интернет арқылы ашылады. Мекенжай мен координаттар төменде көрсетілген.</p>
-          </div>
+          <figure class="map-photo">
+            <a href="https://go.2gis.com/ICQkc" target="_blank" rel="noopener noreferrer" aria-label="Шымқаланы 2GIS картасында ашу (жаңа бет)">
+              <img src="assets/shymqala-gate.webp" width="1600" height="1066" loading="lazy" alt="Шымқала тарихи-мәдени кешенінің қақпасы">
+              <span class="map-photo-link">2GIS картасында ашу ↗</span>
+            </a>
+            <figcaption>Шымқала кешені. Фото: TheGreatSteppe / Wikimedia Commons, CC BY-SA 4.0.</figcaption>
+          </figure>
           <aside class="map-meta" aria-label="Нысан туралы мәлімет">
             <p class="section-index">ТАРИХИ-МӘДЕНИ КЕШЕН</p><h3>«Шымқала»</h3>
             <p>Шымкент қаласы<br>Әйтеке би көшесі, 30/29</p>
             <p class="map-coordinates">42.30554, 69.59566</p>
-            <div class="map-actions"><button class="button button-primary" id="map-load" type="button">Картаны ашу</button><a href="https://www.google.com/maps/dir/?api=1&amp;destination=42.30554,69.59566" target="_blank" rel="noopener noreferrer">Бағытты ашу ↗</a></div>
+            <div class="map-actions"><a class="button button-primary" id="map-2gis" href="https://go.2gis.com/ICQkc" target="_blank" rel="noopener noreferrer">2GIS картасында ашу ↗</a></div>
             <p>Координаттар мен мекенжай: <a href="https://kazakhstan.travel/kz/attractions/471" target="_blank" rel="noopener noreferrer">Kazakhstan.travel [3]</a>.</p>
-            <p class="map-note">Белгі кешеннің жалпы орнын көрсетеді. Қазба бөліктерінің нақты координаттары және кедергісіз кіру жолы бұл картада белгіленбеген.</p>
-            <p class="map-note">Карта негізі: OpenStreetMap. <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener noreferrer">Карта қатесі туралы хабарлау ↗</a></p>
+            <p class="map-note">Сілтеме 2GIS картасын жаңа бетте ашады. Сол жерден нысанды көріп, жету бағытын құра аласыз.</p>
+            <p class="map-note"><a href="#audio-guide">Кешен тарихын қазақша тыңдау →</a></p>
           </aside>
         </div>
       </div>

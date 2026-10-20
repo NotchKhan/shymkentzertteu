@@ -89,31 +89,4 @@
     })
     .catch(() => { status.textContent = 'Аудио тізімі ашылмады. Төмендегі MP3 файлдарын тікелей тыңдауға болады.'; });
 
-  const mapButton = document.getElementById('map-load');
-  const mapStatus = document.getElementById('map-status');
-  const coordinates = [42.30554, 69.59566];
-  let map;
-  let marker;
-  mapButton.addEventListener('click', () => {
-    if (map) { map.setView(coordinates, 16); marker.openPopup(); return; }
-    if (!window.L) { mapStatus.textContent = 'Карта ашылмады. «Бағытты ашу» сілтемесін пайдаланыңыз.'; return; }
-    document.getElementById('map-placeholder').hidden = true;
-    const container = document.getElementById('heritage-map');
-    container.hidden = false;
-    map = L.map(container, {zoomControl: false, scrollWheelZoom: false}).setView(coordinates, 16);
-    L.control.zoom({zoomInTitle:'Картаны үлкейту',zoomOutTitle:'Картаны кішірейту'}).addTo(map);
-    map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener noreferrer">Leaflet</a>');
-    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap қатысушылары</a>'
-    }).addTo(map);
-    let tileFailed = false;
-    tiles.on('tileerror', () => { tileFailed = true; mapStatus.textContent = 'Картаның кейбір бөліктері жүктелмеді. Интернетті тексеріңіз немесе бағыт сілтемесін ашыңыз.'; });
-    tiles.on('loading', () => { tileFailed = false; });
-    tiles.on('load', () => { if (!tileFailed) mapStatus.textContent = 'Карта ашылды. Белгішені басып, нысан туралы оқыңыз.'; });
-    const icon = L.divIcon({className:'heritage-pin',html:'<span aria-hidden="true">Ш</span>',iconSize:[48,58],iconAnchor:[24,55],popupAnchor:[0,-52]});
-    marker = L.marker(coordinates,{icon,title:'Шымқала тарихи-мәдени кешені',alt:'Картадағы Шымқала кешені',keyboard:true}).addTo(map);
-    marker.bindPopup('<div class="map-popup"><img src="assets/shymqala-gate.webp" alt="Шымқала қақпасы" width="240" height="125"><strong>Шымқала</strong><p>Тарихи-мәдени кешен<br>Әйтеке би көшесі, 30/29</p><a href="#audio-guide">Қазақша аудиогидке өту →</a></div>',{maxWidth:270,closeButton:false}).openPopup();
-    mapButton.textContent = 'Нысанға оралу';
-    mapStatus.textContent = 'Карта жүктеліп жатыр…';
-  });
 })();
